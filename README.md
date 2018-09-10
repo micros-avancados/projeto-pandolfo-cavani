@@ -1,11 +1,11 @@
 # Projeto2SMA
 
-##Alternativas de projeto:
+## Alternativas de projeto:
 IHM Automação Residencial;
 Fliperama Emulador PS1;
 Relógio Ponto com RFID;
 
-##Comparativo Raspberry e BeagleBone
+## Comparativo Raspberry e BeagleBone
 
 Tipos de portas e pinos, e quantidades;
 Facilidade em conseguir bibliotecas;
