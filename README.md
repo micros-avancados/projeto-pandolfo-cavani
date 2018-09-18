@@ -1,6 +1,6 @@
 # Fliperama com Raspberry Pi
 
-** Nome: Mathias Trevisan e Lucas Eduardo Pandolfo **
+**Nome: Mathias Trevisan e Lucas Eduardo Pandolfo**
 
 Decidimos que nosso projeto seria um fliperama com emulador de consoles antigos de vídeo game,
 aonde optamos em utilizar a Raspberry (Figura 3) ao invés de uma Beaglebone,
@@ -17,4 +17,4 @@ A intensão é de utilizarmos o monitor e o joystick com os botões inclusos no 
 (como mostra na figura 1) para implementar um novo fliperama com um Raspberry Pi 3, aonde poderemos o
 deixar disponível para substituir o atual com defeito, e assim não desperdiçar o projeto.
 
-
+![Fliperama DCE](/41985781_266601204186773_5485603140361256960_n.jpg)
