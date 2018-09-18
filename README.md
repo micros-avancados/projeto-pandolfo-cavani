@@ -18,3 +18,6 @@ A intensão é de utilizarmos o monitor e o joystick com os botões inclusos no 
 deixar disponível para substituir o atual com defeito, e assim não desperdiçar o projeto.
 
 ![Fliperama DCE](/41985781_266601204186773_5485603140361256960_n.jpg)
+![Fliperama_defeituoso](/2.jpg)
+[Fliperama_raspberry_pi3](/3.jpg)
+[Fliperama_RBpi3_conf](/4.jpg)
