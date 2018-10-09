@@ -21,3 +21,17 @@ deixar disponível para substituir o atual com defeito, e assim não desperdiça
 ![Fliperama_defeituoso](/2.jpg)
 [Fliperama_raspberry_pi3](/3.jpg)
 [Fliperama_RBpi3_conf](/4.jpg)
+
+**Funcionamento do dispositivo**
+
+-Como havia abordado no planejamento do projeto, foi aprovado que podíamos usar os dispositivos 
+que o DCE disponibilizou para consertar o fliperama.
+
+-Já foi implementado a placa raspberry, na qual instalamos o retropie para poder rodar os jogos
+no fliperama.
+
+-Para poder fazer os testes depois de termos instalado o retropie, usamos controle USBs para ver
+o comportamento do sistema se não trancava os jogos ou não rodava.
+
+-Já que o nosso objetivo é implementar o controle por GPIO, o próximo passo seria a programação
+dos botões do fliperama.
