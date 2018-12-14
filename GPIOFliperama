@@ -1,0 +1,123 @@
+import uinput
+import time
+import RPi.GPIO as GPIO
+
+GPIO.setmode(GPIO.BOARD)
+#PLAYER 1
+GPIO.setup(40, GPIO.IN, pull_up_down=GPIO.PUD_UP) #UP
+GPIO.setup(38, GPIO.IN, pull_up_down=GPIO.PUD_UP) #DOWN
+GPIO.setup(37, GPIO.IN, pull_up_down=GPIO.PUD_UP) #LEFT
+GPIO.setup(35, GPIO.IN, pull_up_down=GPIO.PUD_UP) #RIGHT
+
+GPIO.setup(36, GPIO.IN, pull_up_down=GPIO.PUD_UP) #START
+GPIO.setup(33, GPIO.IN, pull_up_down=GPIO.PUD_UP) #SELECT
+
+GPIO.setup(32, GPIO.IN, pull_up_down=GPIO.PUD_UP) #X
+GPIO.setup(31, GPIO.IN, pull_up_down=GPIO.PUD_UP) #Y
+GPIO.setup(29, GPIO.IN, pull_up_down=GPIO.PUD_UP) #A
+GPIO.setup(24, GPIO.IN, pull_up_down=GPIO.PUD_UP) #B
+GPIO.setup(26, GPIO.IN, pull_up_down=GPIO.PUD_UP) #L1
+GPIO.setup(23, GPIO.IN, pull_up_down=GPIO.PUD_UP) #R1
+
+#GPIO.setup(, GPIO.IN, pull_up_down=GPIO.PUD_UP) #L2
+#GPIO.setup(, GPIO.IN, pull_up_down=GPIO.PUD_UP) #R2
+
+events = (
+    uinput.KEY_W,
+    uinput.KEY_S,
+    uinput.KEY_A,
+    uinput.KEY_D,
+
+    uinput.KEY_Q,
+    uinput.KEY_E,
+
+    uinput.KEY_R,
+    uinput.KEY_T,
+    uinput.KEY_F,
+    uinput.KEY_G,
+
+    uinput.KEY_Y,
+    uinput.KEY_H,
+
+    )
+
+device = uinput.Device(events)
+
+up = False
+down = False
+left = False
+right = False
+
+start = False
+select = False
+
+xx = False
+yy = False
+aa = False
+bb = False
+
+l1 = False
+r1 = False
+
+while True:
+  if (not xx) and (not GPIO.input(32)):
+    xx = True
+    device.emit_click(uinput.KEY_R)
+  if xx and GPIO.input(32):
+    xx = False
+  if (not yy) and (not GPIO.input(31)):
+    yy = True
+    device.emit_click(uinput.KEY_T)
+  if yy and GPIO.input(31):
+    yy = False
+  if (not aa) and (not GPIO.input(29)):
+    aa = True
+    device.emit_click(uinput.KEY_F)
+  if aa and GPIO.input(29):
+    aa = False
+  if (not bb) and (not GPIO.input(24)):
+    bb = True
+    device.emit_click(uinput.KEY_G)
+  if bb and GPIO.input(24):
+    bb = False
+  if (not start) and (not GPIO.input(36)):
+    start = True
+    device.emit_click(uinput.KEY_Q)
+  if start and GPIO.input(36):
+    start = False
+  if (not select) and (not GPIO.input(33)):
+    select = True
+    device.emit_click(uinput.KEY_E)
+  if select and GPIO.input(33):
+    select = False
+  if (not l1) and (not GPIO.input(26)):
+    l1 = True
+    device.emit_click(uinput.KEY_Y)
+  if l1 and GPIO.input(26):
+    l1 = False
+  if (not r1) and (not GPIO.input(23)):
+    r1 = True
+    device.emit_click(uinput.KEY_H)
+  if r1 and GPIO.input(23):
+    r1 = False
+  if (not up) and (not GPIO.input(40)):
+    up = True
+    device.emit_click(uinput.KEY_W)
+  if up and GPIO.input(40):
+    up = False
+  if (not down) and (not GPIO.input(38)): 
+    down = True
+    device.emit_click(uinput.KEY_S)        
+  if down and GPIO.input(38):             
+    down = False
+  if (not left) and (not GPIO.input(35)): 
+    left = True
+    device.emit_click(uinput.KEY_A)          
+  if left and GPIO.input(35):       
+    left = False 
+  if (not right) and (not GPIO.input(37)):
+    right = True
+    device.emit_click(uinput.KEY_D)       
+  if right and GPIO.input(37):  
+    right = False
+  time.sleep(.02)  # Poll every 20ms (otherwise CPU load gets too high)
