@@ -17,10 +17,8 @@ A intensão é de utilizarmos o monitor e o joystick com os botões inclusos no 
 (como mostra na figura 1) para implementar um novo fliperama com um Raspberry Pi 3, aonde poderemos o
 deixar disponível para substituir o atual com defeito, e assim não desperdiçar o projeto.
 
-![Fliperama DCE](/41985781_266601204186773_5485603140361256960_n.jpg)
-![Fliperama_defeituoso](/2.jpg)
-[Fliperama_raspberry_pi3](/3.jpg)
-[Fliperama_RBpi3_conf](/4.jpg)
+Imagens e Videos do projeto
+https://drive.google.com/drive/folders/1XPUwyRzA1HuknyGjKVIcBkT6ABPiDq3j?usp=sharing
 
 **Funcionamento do dispositivo**
 
